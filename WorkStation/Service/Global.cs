@@ -1,7 +1,7 @@
 ﻿#define Debug_Show
 
 
-namespace WorkStation_Wpf
+namespace WorkStation
 {
     /// <summary>
     /// 此类中是全局使用的字符串和弹窗提示

@@ -2,7 +2,7 @@
 using System.Xml.Serialization;
 using System.IO;
 
-namespace WorkStation_Wpf
+namespace WorkStation
 {
     /// <summary>
     /// 配置类

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WorkStation_Wpf
+namespace WorkStation
 {
     /// <summary>
     /// Robot 控制类

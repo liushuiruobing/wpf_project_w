@@ -8,7 +8,7 @@ using System.IO;
 using System.Diagnostics;
 using System.Collections.Concurrent;
 
-namespace WorkStation_Wpf
+namespace WorkStation
 {
     public enum TcpMeasType
     {

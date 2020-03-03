@@ -6,7 +6,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WorkStation_Wpf
+namespace WorkStation
 {
     public enum ControlerCommandCode : byte  
     {

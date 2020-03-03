@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace WorkStation_Wpf
+namespace WorkStation
 {
     class MyMath
     {

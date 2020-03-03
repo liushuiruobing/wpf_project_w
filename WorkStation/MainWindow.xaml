@@ -6,7 +6,10 @@
         xmlns:local="clr-namespace:WorkStation"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="工作站"
+        Height="400" 
+        Width="600"
+        >
     <Grid>
         
     </Grid>
