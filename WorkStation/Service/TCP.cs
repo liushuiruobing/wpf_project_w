@@ -94,7 +94,7 @@ namespace WorkStation
                 }
                 catch (System.Exception ex)
                 {
-                    Global.MessageBoxShow_Error("11111: " + ex.Message);
+                    Global.m_Log.Warn(ex.Message);
                 }
             }
         }
@@ -118,7 +118,7 @@ namespace WorkStation
                 }
                 catch (System.Exception ex)
                 {
-                    Global.MessageBoxShow_Error("22222: " + ex.Message);
+                    Global.m_Log.Warn("22222: " + ex.Message);
                 }
             }
         }
@@ -148,7 +148,7 @@ namespace WorkStation
                 }
                 catch (Exception ex)
                 {
-                    Global.MessageBoxShow_Error("33333: " + ex.Message);
+                    Global.m_Log.Warn("33333: " + ex.Message);
                     break;
                 }
                 Thread.Sleep(1);
@@ -255,7 +255,7 @@ namespace WorkStation
                 }
                 catch (System.Exception ex)
                 {
-                    Global.MessageBoxShow_Error("55555: " + ex.Message);
+                    Global.m_Log.Warn("55555: " + ex.Message);
                     return;
                 }
             }
@@ -316,7 +316,7 @@ namespace WorkStation
             }
             catch (Exception ex)
             {
-                Global.MessageBoxShow_Error("66666: " + ex.Message);
+                Global.m_Log.Warn("66666: " + ex.Message);
                 return false;
             }
         }
@@ -338,7 +338,7 @@ namespace WorkStation
                 }
                 catch (System.Exception ex)
                 {
-                    Global.MessageBoxShow_Error("999999: " + ex.Message);
+                    Global.m_Log.Warn("999999: " + ex.Message);
                 }
             }
         }
@@ -363,7 +363,7 @@ namespace WorkStation
                 }
                 catch (SocketException ex)
                 {
-                    Global.MessageBoxShow_Error("77777: " + ex.Message);
+                    Global.m_Log.Warn("77777: " + ex.Message);
                     break;
                 }
 
@@ -395,7 +395,7 @@ namespace WorkStation
                 }
                 catch (Exception ex)
                 {
-                    Global.MessageBoxShow_Error("88888: " + ex.Message);
+                    Global.m_Log.Warn("88888: " + ex.Message);
                     break;
                 }
                 Thread.Sleep(1);

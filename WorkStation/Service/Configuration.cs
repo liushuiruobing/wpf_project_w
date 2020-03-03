@@ -49,11 +49,11 @@ namespace WorkStation
         private static readonly string m_FileNameBackup = "ConfigBackup.xml";  //配置文件名
         public static Configuration m_Config = new Configuration();
 
-        public static void LoadConfigFile()
+        public static bool LoadConfigFile()
         {
             string strFile = AppDomain.CurrentDomain.SetupInformation.ApplicationBase + m_FileName;
             if (!File.Exists(strFile))
-                return;           
+                return false;           
 
             using (FileStream fStream = new FileStream(strFile, FileMode.Open))
             {
@@ -61,10 +61,11 @@ namespace WorkStation
                 try
                 {
                     m_Config = xmlSerializer.Deserialize(fStream) as Configuration;
+                    return true;
                 }
                 catch //(InvalidOperationException)
                 {
-                    Global.MessageBoxShow_Question(Global.StrLoadConfigFailed);
+                    return false;
                 }
             }
         }
@@ -90,7 +91,7 @@ namespace WorkStation
                 }
                 catch
                 {
-                    Global.MessageBoxShow_Question(Global.StrSaveConfigFailed);
+                    
                 }
             }
         }

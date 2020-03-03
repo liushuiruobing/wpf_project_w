@@ -2,6 +2,7 @@
 
 using MahApps.Metro.Controls;
 using MahApps.Metro.Controls.Dialogs;
+using NLog;
 using System;
 using System.Windows;
 
@@ -13,8 +14,8 @@ namespace WorkStation
     public class Global
     {
         #region 属性
+        public static ILogger m_Log = LogManager.GetCurrentClassLogger();
 
-        
         public static readonly string StationName = "工作站";
         public static readonly string StrLoadConfigFailed = "加载配置文件失败！";
         public static readonly string StrSaveConfigFailed = "保存配置文件失败！";
@@ -25,24 +26,6 @@ namespace WorkStation
         #endregion
 
         #region 方法
-
-        public static void MessageBoxShow_Question(string StrMessage)
-        {
-            //return MessageBox.Show(StrMessage, StationName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-        }
-
-        public static void MessageBoxShow_Error(string StrMessage)
-        {
-            //return MessageBox.Show(StrMessage, StationName, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-        }
-
-        public static async void ShowMessageDialog()
-        {
-            MetroWindow temp = new MetroWindow();
-            // This demo runs on .Net 4.0, but we're using the Microsoft.Bcl.Async package so we have async/await support
-            // The package is only used by the demo and not a dependency of the library!
-            await temp.ShowMessageAsync("This is the title", "Some message");
-        }
 
         #endregion
     }
