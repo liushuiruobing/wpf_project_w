@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:WorkStation.ResourceDictionary">
+
+    <!--ImageBrush-->
+    <!--ImageBrush x:Key="SearchBrush" Stretch="Uniform" ImageSource="../Images/Search_Green.png"/-->
+
+    <SolidColorBrush x:Key="MainBlack" Color="#333333"/>
+</ResourceDictionary>

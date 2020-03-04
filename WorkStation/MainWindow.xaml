@@ -6,39 +6,53 @@
         xmlns:local="clr-namespace:WorkStation"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         mc:Ignorable="d"
-        Title="工作站"
-        Icon="Images/deviser.ico" 
-        ResizeMode="CanMinimize"                    
+        ResizeMode="NoResize"                    
         WindowStartupLocation="CenterScreen" 
-        Height="400" 
-        Width="600" 
+        Width="800"
+        Height="600" 
+        WindowState="Maximized"
+        Icon="Images/deviser.ico" 
+        ShowInTaskbar="True" 
+        ShowTitleBar="False" 
+        WindowStyle="None"                     
+        Background="{StaticResource MainBlack}"
         >
+    
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="25*"/>
-            <ColumnDefinition Width="173*"/>
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="3*"/>
-            <RowDefinition Height="34*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="170*"/>
         </Grid.RowDefinitions>
 
-        <TreeView x:Name="treeView" Grid.Row="1" Grid.Column="0" Background="Gray" Margin="0">
-            <Button Content="自动运行" />
-            <Button Content="手动测试"/>
-            <Button Content="系统设置"/>
-            <Button Content="退       出"/>
-        </TreeView>
+        <!--标题栏-->
+        <Grid x:Name="Grid_Title" Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="imageTitle" Margin="10,0,0,0" Source="Images/DEVISER128X22.ico" Height="20" HorizontalAlignment="Left"/>
+            <TextBlock x:Name="textBlockTitle" Grid.Column="1" Foreground="White" FontSize="24" Text="工作站" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </Grid>
+        
+        <!--分割线-->
+        <Separator  Grid.Row="1" Background="White" Margin="0"/>
 
-
-        <TabControl x:Name="tabControl" Grid.Column="1" Margin="0" Grid.Row="1">
-            <TabItem Header="TabItem1">
+        <!--TabControl-->
+        <TabControl x:Name="tabControl" Grid.Row="2" Background="{StaticResource MainBlack}" TabStripPlacement="Left" Controls:TabControlHelper.IsUnderlined="True">
+            <TabItem Header="自动运行" Controls:ControlsHelper.HeaderFontSize="22" Height="40" Padding="6,4" >
                 <Grid Background="Green"/>
             </TabItem>
-            <TabItem Header="TabIte2m">
+            <TabItem Header="手动调试" Controls:ControlsHelper.HeaderFontSize="22" Height="40" Padding="6,4" >
                 <Grid Background="GreenYellow"/>
             </TabItem>
+            <TabItem Header="系统设置" Controls:ControlsHelper.HeaderFontSize="22" Height="40" Padding="6,4" >
+                <Grid Background="Red"/>
+            </TabItem>
+            <TabItem Header="退　　出" Controls:ControlsHelper.HeaderFontSize="22" Height="40" Padding="6,4" >
+                <Grid Background="Blue"/>
+            </TabItem>
         </TabControl>
-
     </Grid>
 </Controls:MetroWindow>
